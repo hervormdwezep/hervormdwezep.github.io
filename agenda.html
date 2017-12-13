@@ -1,6 +1,36 @@
 <html>
+<head>
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css' />
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/locale/nl.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/gcal.js'></script>
+</head>
 <body>
-  <h1>Test Agenda</h1>
-  <p>Hier moet de gezamelijke agenda komen van de verschillende gebouwen</p>
-</body>
+<div id='calendar'><p>Test</p></div>
+<script type='text/javascript'>
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        defaultView: 'listMonth',
+        googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
+        eventSources: [
+            {
+                googleCalendarId: 'le7o81vkb26po7fee9egestooo@group.calendar.google.com'
+            },
+            {
+                googleCalendarId: 'q9ipt257tvc5j73520rm83ggn4@group.calendar.google.com',
+            },
+            {
+                googleCalendarId: 'pj5ufq9abrrq9scp7hs6ohkln8@group.calendar.google.com',
+            },
+            {
+                googleCalendarId: 'hervormdwezep@gmail.com',
+            }
+        ]
+    });
+});
+
+</script></body
 </html>
