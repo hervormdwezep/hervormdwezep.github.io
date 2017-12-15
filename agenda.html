@@ -3,18 +3,21 @@
    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css' />
    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js'></script>
-   <script src='https://wezep.protestantsekerk.net/sjabloon12/css/bootstrap.css'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/locale/nl.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/gcal.js'></script>
 </head>
 <body>
 <div id='calendar' style='overflow-y:hidden;'></div>
+<style>
+	#calendar.fc-unthemed {
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	}
+</style>
 <script type='text/javascript'>
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         defaultView: 'listMonth',
-        themeSystem: 'bootstrap3',
         height:'parent',
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
         eventSources: [
