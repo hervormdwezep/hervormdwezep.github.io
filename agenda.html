@@ -24,6 +24,11 @@ $(document).ready(function() {
               end: nowDate.clone().add(1, 'year')
           };
 	},
+	eventClick: function(calEvent, jsEvent, view) {
+	    var win = window.open(calEvent.url, '_blank');
+            win.focus();
+ 	    return false;
+        },
         height:'parent',
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
         eventSources: [
