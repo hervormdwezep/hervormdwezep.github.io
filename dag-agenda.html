@@ -23,6 +23,10 @@ $(document).ready(function() {
 		eventClick: function(calEvent, jsEvent, view) {
 		    return false;
         },
+		eventAfterAllRender: function(view)
+		{
+		   $('td.fc-widget-header').replaceWith('');
+		},
         height:'parent',
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
         eventSources: [
@@ -45,7 +49,5 @@ $(document).ready(function() {
            }
         }});
      });
-     $('#calendar').fullCalendar('today');
-	 
 </script></body
 </html>
