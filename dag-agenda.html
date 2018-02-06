@@ -32,12 +32,6 @@ $(document).ready(function() {
 		   $('td.fc-widget-header').replaceWith('');
 		},
         height:'parent',
-	validRange: function(nowDate) {
-          return {
-              start: nowDate.clone().add(0, 'hour'),
-              end: nowDate.clone().add(1, 'day')
-          };
-	},
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
         eventSources: [
             {
