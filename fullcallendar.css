@@ -1405,7 +1405,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .fc-list-view {
-	border-width: 0px; // was 1px
+	border-width: 0px; /* was 1px */
 	border-style: solid;
 }
 
@@ -1416,8 +1416,8 @@ be a descendant of the grid when it is being dragged.
 }
 
 .fc-list-table td {
-	border-width: 0 0 0 0; //was 1 0 0
-	padding: 8px 14px; // was 8px 14px
+	border-width: 0 0 0 0; /* was 1 0 0 */
+	padding: 8px 14px; /* was 8px 14px */
 }
 
 .fc-list-table tr:first-child td {
