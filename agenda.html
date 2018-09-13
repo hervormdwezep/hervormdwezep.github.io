@@ -54,6 +54,7 @@ $(document).ready(function() {
            //if (typeof event.location !== 'undefined') {
 	      var htmltxt = event.title;
 	      var url = event.url;
+	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
 	      {
@@ -62,9 +63,14 @@ $(document).ready(function() {
 			      url = event.description.substr(8);
 	     		      $(element).find('a').attr('name', 'jumper');
 		      }
+		      else
+		      {
+			      title = event.description;
+		      }
 	      }
               $(element).find('a').attr('href', url );
               $(element).find('a').html(htmltxt);
+	      $(element).find('a').attr('title', title);
 	      return true;
           // }
           }
