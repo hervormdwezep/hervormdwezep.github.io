@@ -25,9 +25,12 @@ $(document).ready(function() {
 	    header: false,	
         defaultView: 'listDay',
 	eventClick: function(calEvent, jsEvent, view) {
-	    var linkUrl = $('a', this).attr('href');
-  	    var win = window.open(linkUrl, '_blank');
-            win.focus();
+   	    if($('a', this).attr('name') == 'jumper')
+	    {
+		    var linkUrl = $('a', this).attr('href');
+		    var win = window.open(linkUrl, '_blank');
+		    win.focus();
+	    }
  	    return false;
         },
 	eventAfterAllRender: function(view)
@@ -61,6 +64,7 @@ $(document).ready(function() {
 		      if(event.description.startsWith('website:'))
 		      {
 			      url = event.description.substr(8);
+			      $(element).find('a').attr('name', 'jumper');
 		      }
 		      else
 		      {
@@ -71,6 +75,7 @@ $(document).ready(function() {
 	      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
               $(element).find('a').attr('href', url );
               $(element).find('a').html(htmltxt);
+	      $(element).find('a').attr('title', title);
    	      $(element).find('span.fc-event-dot').replaceWith('');
         }});
      });
