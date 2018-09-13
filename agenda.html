@@ -26,9 +26,13 @@ $(document).ready(function() {
 	},
 	eventClick: function(calEvent, jsEvent, view) {
 	    var linkUrl = $('a', this).attr('href');
-  	    var win = window.open(linkUrl, '_blank');
-            win.focus();
- 	    return false;
+	    if($('a', this).attr('name') == 'jumper')
+	    {
+		    var win = window.open(linkUrl, '_blank');
+		    win.focus();
+	 	    return false;
+	    }
+	    return true;
         },
         height:'parent',
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
@@ -60,6 +64,7 @@ $(document).ready(function() {
 	      }
               $(element).find('a').attr('href', url );
               $(element).find('a').html(htmltxt);
+	      $(element).find('a').attr('name', 'jumper');
 	      return true;
           // }
           }
