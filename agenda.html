@@ -50,20 +50,17 @@ $(document).ready(function() {
         eventRender: function(event, element) {
            if (typeof event.location !== 'undefined') {
 	      var htmltxt = event.title;
-	      var urlx = event.url;
+	      var url = event.url;
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
 	      {
 		      if(event.description.startsWith('website:'))
 		      {
-			      var url = event.description.substr(8);
-			      htmltxt = '<a href="' + url + '">' + htmltxt + '</a>'
-			      event.url = event.description.substr(8);
-			      urlx = url;
+			      url = event.description.substr(8);
 		      }
 	      }
-              $(element).find('a').attr('href', urlx );
-              $(element).find('a').html(event.title);
+              $(element).find('a').attr('href', url );
+              $(element).find('a').html(htmltxt);
 	      return true;
            }
         }});
