@@ -47,7 +47,7 @@ $(document).ready(function() {
         ],
         eventRender: function(event, element) {
            if (typeof event.location !== 'undefined') {
-              $(element).find('a').html(event.title + ' (' + event.location + ')' );
+              $(element).find('a').html(event.title + ' (' + event.location + ')' + '-' + event.description );
            }
         }});
      });
