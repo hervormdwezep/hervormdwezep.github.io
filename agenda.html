@@ -53,8 +53,9 @@ $(document).ready(function() {
 	      {
 		      if(event.description.startsWith('website:'))
 		      {
-			      var url = event.url;
+			      var url = event.description.substr(8);
 			      htmltxt = '<a href="' + url + '">' + htmltxt + '</a>'
+			      event.url = event.description.substr(8);
 		      }
 	      }
               $(element).find('a').html( htmltxt );
