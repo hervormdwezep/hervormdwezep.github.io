@@ -60,11 +60,11 @@ $(document).ready(function() {
 		      if(event.description.startsWith('website:'))
 		      {
 			      url = event.description.substr(8);
+	     		      $(element).find('a').attr('name', 'jumper');
 		      }
 	      }
               $(element).find('a').attr('href', url );
               $(element).find('a').html(htmltxt);
-	      $(element).find('a').attr('name', 'jumper');
 	      return true;
           // }
           }
