@@ -47,7 +47,17 @@ $(document).ready(function() {
         ],
         eventRender: function(event, element) {
            if (typeof event.location !== 'undefined') {
-              $(element).find('a').html(event.title + ' (' + event.location + ')' + '-' + event.description );
+	      var htmltxt = event.title;
+	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
+	      if(event.description != undefined)
+	      {
+		      if(event.description.startsWith('website:'))
+		      {
+			      var url = event.description.substr(8);
+			      htmltxt = '<a href="' + url + '">' + htmltxt + '</a>'
+		      }
+	      }
+              $(element).find('a').html( htmltxt );
            }
         }});
      });
