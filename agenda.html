@@ -50,6 +50,7 @@ $(document).ready(function() {
         eventRender: function(event, element) {
            if (typeof event.location !== 'undefined') {
 	      var htmltxt = event.title;
+	      var urlx = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
 	      {
@@ -58,9 +59,10 @@ $(document).ready(function() {
 			      var url = event.description.substr(8);
 			      htmltxt = '<a href="' + url + '">' + htmltxt + '</a>'
 			      event.url = event.description.substr(8);
+			      urlx = url;
 		      }
 	      }
-              $(element).find('a').html( htmltxt );
+              $(element).find('a').attr('href', urlx );
 	      return true;
            }
         }});
