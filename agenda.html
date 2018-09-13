@@ -25,7 +25,6 @@ $(document).ready(function() {
           };
 	},
 	eventClick: function(calEvent, jsEvent, view) {
-	    var url = calEvent.url;
 	    var linkUrl = $('a', this).attr('href');
 	    var win = window.open(linkUrl, '_blank');
             win.focus();
