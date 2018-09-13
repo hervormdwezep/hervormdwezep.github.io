@@ -27,7 +27,7 @@ $(document).ready(function() {
 	eventClick: function(calEvent, jsEvent, view) {
 	    var url = calEvent.url;
 	    var linkUrl = alert($('a', this).attr('href'));
-	    var win = window.open(calEvent.url, '_blank');
+	    var win = window.open(linkUrl, '_blank');
             win.focus();
  	    return false;
         },
@@ -50,7 +50,7 @@ $(document).ready(function() {
         eventRender: function(event, element) {
            if (typeof event.location !== 'undefined') {
 	      var htmltxt = event.title;
-	      var urlx = '';
+	      var urlx = event.url;
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
 	      {
@@ -63,6 +63,7 @@ $(document).ready(function() {
 		      }
 	      }
               $(element).find('a').attr('href', urlx );
+              $(element).find('a').html(event.title);
 	      return true;
            }
         }});
