@@ -45,12 +45,27 @@ $(document).ready(function() {
             }
         ],
         eventRender: function(event, element) {
-           if (typeof event.location !== 'undefined') {
-		      var m = moment(event.start);
-		      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
-              $(element).find('a').replaceWith('<p>'+ event.title + '</br>' +' (' + event.location + ')' +'</p>');
-			  $(element).find('span.fc-event-dot').replaceWith('');
-           }
+	      var htmltxt = '<p>' + event.title;
+	      var url = event.url;
+	      var title = '';
+	      if(event.location != undefined) htmltxt += '</br>' +' (' + event.location + ')';
+	      htmltxt += '</p>';
+	      if(event.description != undefined)
+	      {
+		      if(event.description.startsWith('website:'))
+		      {
+			      url = event.description.substr(8);
+		      }
+		      else
+		      {
+			      title = event.description;
+		      }
+	      }		
+	      var m = moment(event.start);
+	      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
+              $(element).find('a').attr('href', url );
+              $(element).find('a').html(htmltxt);
+   	      $(element).find('span.fc-event-dot').replaceWith('');
         }});
      });
 </script></body
