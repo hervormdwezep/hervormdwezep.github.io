@@ -80,6 +80,7 @@ $(document).ready(function() {
 		      var textnode = document.createTextNode(htmltxt);
 		      newItem.appendChild(textnode);
 		      $(element).insertBefore(newItem, anchor);
+		      anchor = $(element).find('a');
 		      anchor.parentElement.removeChild(anchor);     
 	      }
 	      return true;
