@@ -73,9 +73,13 @@ $(document).ready(function() {
 	      }		
 	      var m = moment(event.start);
 	      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
-              $(element).find('a').attr('href', url );
-              $(element).find('a').html(htmltxt);
+
+	      var cursor =  (url == '') ? 'default' : 'pointer';
+	      $(element).find('a').attr('href', url );
+	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
+	      $(element).find('a').html(htmltxt);
 	      $(element).find('a').attr('title', title);
+				
    	      $(element).find('span.fc-event-dot').replaceWith('');
         }});
      });
