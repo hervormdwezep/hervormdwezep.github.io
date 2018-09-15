@@ -75,13 +75,8 @@ $(document).ready(function() {
 		      $(element).find('a').attr('title', title);
 	      }
 	      else {
-		      var anchor = $(element).find('a');
-		      var newItem = document.createElement("span");
-		      var textnode = document.createTextNode(htmltxt);
-		      newItem.appendChild(textnode);
-		      $(element).insertBefore(newItem, anchor);
-		      anchor = $(element).find('a');
-		      $('a', element).remove();     
+		      $('a', element).remove();  
+		      $element.html(htmltxt);
 	      }
 	      return true;
           // }
