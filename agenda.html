@@ -68,8 +68,9 @@ $(document).ready(function() {
 			      title = event.description;
 		      }
 	      }
+	      var cursor =  (url == '') ? 'default' : 'pointer';
 	      $(element).find('a').attr('href', url );
-	      $(element).find('a').attr('style', 'text-decoration:none;' );
+	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
 	      $(element).find('a').html(htmltxt);
 	      $(element).find('a').attr('title', title);
 	      return true;
