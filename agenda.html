@@ -68,16 +68,9 @@ $(document).ready(function() {
 			      title = event.description;
 		      }
 	      }
-	      if(url !== '')
-	      {
-		      $(element).find('a').attr('href', url );
-		      $(element).find('a').html(htmltxt);
-		      $(element).find('a').attr('title', title);
-	      }
-	      else {
-		      $('a', element).remove();  
-		      $(element).html(htmltxt);
-	      }
+	      $(element).find('a').attr('href', url );
+	      $(element).find('a').html(htmltxt);
+	      $(element).find('a').attr('title', title);
 	      return true;
           // }
           }
