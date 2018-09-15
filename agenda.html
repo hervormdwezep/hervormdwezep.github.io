@@ -81,7 +81,7 @@ $(document).ready(function() {
 		      newItem.appendChild(textnode);
 		      $(element).insertBefore(newItem, anchor);
 		      anchor = $(element).find('a');
-		      anchor.parentNode.removeChild(anchor);     
+		      $('a', element).remove();     
 	      }
 	      return true;
           // }
