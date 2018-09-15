@@ -53,7 +53,7 @@ $(document).ready(function() {
         eventRender: function(event, element) {
            //if (typeof event.location !== 'undefined') {
 	      var htmltxt = event.title;
-	      var url = event.url;
+	      var url = '';
 	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
@@ -68,9 +68,20 @@ $(document).ready(function() {
 			      title = event.description;
 		      }
 	      }
-              $(element).find('a').attr('href', url );
-              $(element).find('a').html(htmltxt);
-	      $(element).find('a').attr('title', title);
+	      if(url !== '')
+	      {
+		      $(element).find('a').attr('href', url );
+		      $(element).find('a').html(htmltxt);
+		      $(element).find('a').attr('title', title);
+	      }
+	      else {
+		      var anchor = $(element).find('a');
+		      var newItem = document.createElement("span");
+		      var textnode = document.createTextNode(htmltxt);
+		      newItem.appendChild(textnode);
+		      $(element).insertBefore(newItem, anchor);
+		      anchor.parentElement.removeChild(anchor);     
+	      }
 	      return true;
           // }
           }
