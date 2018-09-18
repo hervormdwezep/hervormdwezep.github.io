@@ -52,6 +52,8 @@ $(document).ready(function() {
             }
         ],
         eventRender: function(event, element) {
+	   $(element).find('a').html('tekst');
+ 	   return true;
            //if (typeof event.location !== 'undefined') {
 	   if(event != undefined)
 	   {
