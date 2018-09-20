@@ -6,6 +6,7 @@
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/locale/nl.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/gcal.js'></script>
+   <script type="text/javascript" src="https://hervormdwezep.github.io/polyfill.js"></script>
 </head>
 <body style="overflow-y:hidden">
 <div id='calendar' style='overflow-y:hidden;'></div>
@@ -17,11 +18,11 @@
 <script type='text/javascript'>
 $(document).ready(function() {
     // Polyfill missende methode
-    if (!String.prototype.startsWith) {
-      String.prototype.startsWith = function(search, pos) {
-         return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
-      };
-    }
+    //if (!String.prototype.startsWith) {
+    //  String.prototype.startsWith = function(search, pos) {
+    //     return this.substr(!pos || pos < 0 ? 0 : +pos, search.length) === search;
+    //  };
+    //}
 	
     $('#calendar').fullCalendar({
         defaultView: 'listMonth',
