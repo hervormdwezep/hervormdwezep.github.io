@@ -1,4 +1,3 @@
-(){
   declareStartsWith();
   
   declareStartsWith()
@@ -9,4 +8,3 @@
           };
         }
   }
-}
