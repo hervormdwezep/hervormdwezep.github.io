@@ -17,7 +17,8 @@
 </style>
 <script type='text/javascript'>
 $(document).ready(function() {
-    PolyFill.init();
+    pf = new PolyFill();
+    pf.Init();
     $('#calendar').fullCalendar({
         defaultView: 'listMonth',
         validRange: function(nowDate) {
