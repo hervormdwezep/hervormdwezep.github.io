@@ -1,7 +1,5 @@
-{
-  {
-    declareStartsWith();
-  }
+(){
+  declareStartsWith();
   
   declareStartsWith()
   {
