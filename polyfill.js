@@ -1,6 +1,6 @@
   declareStartsWith();
   
-  declareStartsWith()
+  function declareStartsWith()
   {
         if (!String.prototype.startsWith) {
           String.prototype.startsWith = function(search, pos) {
