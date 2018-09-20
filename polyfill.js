@@ -1,5 +1,5 @@
-class PolyFill {
-  Init() 
+{
+  function () 
   {
     declareStartsWith();
   }
