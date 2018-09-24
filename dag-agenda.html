@@ -85,8 +85,9 @@ $(document).ready(function() {
 	      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
 
 	      var cursor =  (url == '') ? 'default' : 'pointer';
+	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
 	      $(element).find('a').attr('href', url );
-	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
+	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
 	      $(element).find('a').html(htmltxt);
 	      $(element).find('a').attr('title', title);
 				
