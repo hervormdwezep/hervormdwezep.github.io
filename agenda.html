@@ -72,7 +72,7 @@ $(document).ready(function() {
 		      }
 	      }
 	      var cursor =  (url == '') ? 'default' : 'pointer';
-	      var tekstdeco = (url == '') ? '' : 'text-decoration:none;'
+	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
 	      $(element).find('a').attr('href', url );
 	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
 	      $(element).find('a').html(htmltxt);
