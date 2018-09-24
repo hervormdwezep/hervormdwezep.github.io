@@ -7,6 +7,9 @@
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/locale/nl.js'></script>
    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.js'></script>
    <script type="text/javascript" src="https://hervormdwezep.github.io/polyfill.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.min.css"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.css"></script>	
 </head>
 <body style="overflow-y:hidden">
 <div id='calendar' style='overflow-y:hidden;'></div>
@@ -76,12 +79,21 @@ $(document).ready(function() {
 	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
 	      $(element).find('a').html(htmltxt);
 	      $(element).find('a').attr('title', title);
+	      $(element).find('a').addClass('agendaitem');
           }
 	  return true;
         }
 	});
      });
-     $('#calendar').fullCalendar( 'gotoDate', moment() )
+     $('#calendar').fullCalendar( 'gotoDate', moment() );
+     $('.agendaitem[description!=''][description!^="website:"]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
+    	content: {
+        	attr: 'description' // Tell qTip2 to look inside this attr for its content
+        },
+	title : {
+		attr: 'title'
+	}
+     });
   </script>
 </body>
 </html>
