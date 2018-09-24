@@ -86,7 +86,7 @@ $(document).ready(function() {
 	});
      });
      $('#calendar').fullCalendar( 'gotoDate', moment() );
-     $('.agendaitem[description!=''][description!^="website:"]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
+     $('.agendaitem[description!=""][description!^="website:"]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
     	content: {
         	attr: 'description' // Tell qTip2 to look inside this attr for its content
         },
