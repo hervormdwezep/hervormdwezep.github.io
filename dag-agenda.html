@@ -65,7 +65,7 @@ $(document).ready(function() {
         ],
         eventRender: function(event, element) {
 	      var htmltxt = '<p>' + event.title;
-	      var url = event.url;
+	      var url = '';
 	      var title = '';
 	      if(event.location != undefined) htmltxt += '</br>' +' (' + event.location + ')';
 	      htmltxt += '</p>';
