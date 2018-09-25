@@ -20,12 +20,12 @@
 .qtip-default{
 	border: 1px solid #CC3300;
 
-	background-color: #FFFFFF;
+	background-color: #edb1a6;
 	color: #000;
 }
 
 	.qtip-default .qtip-titlebar{
-		background-color: #CC3300;
+		background-color: #f94928;
 		color:#000;
 	}
 
@@ -112,14 +112,14 @@ $(document).ready(function() {
 			position: {
 				my: 'top left',  // Position my top left...
 				at: 'left center',
-				target: $(element)
+				target: 'mouse'
 			},
 			 style: {
 				classes: 'qtip-blue qtip-shadow'
 			},
 			show: {
 				effect: function(offset) {
-					$(this).slideDown(100); // "this" refers to the tooltip
+					$(this).slideDown(200); // "this" refers to the tooltip
 				}
 			}
 		     }); 
