@@ -84,13 +84,19 @@ $(document).ready(function() {
  	       		text: event.description, 
 			title:event.title
         	},
-		position: {
-        		target: 'mouse'
+    		position: {
+        		my: 'top left',  // Position my top left...
+        		at: 'left center', // at the bottom right of...
+        		target: $(element) // my target
     		},
-		style: {
+		 style: {
         		classes: 'qtip-blue qtip-shadow'
+    		},
+    		show: {
+        		effect: function(offset) {
+            			$(this).slideDown(100); // "this" refers to the tooltip
+        		}
     		}
-
              });   
           }
 	  return true;
