@@ -18,15 +18,15 @@
 	}
 	/* Default tooltip style */
 .qtip-default{
-	border: 1px solid #CC3300;
+	border: 1px solid #000;
 
 	background-color: #FFFFFF;
 	color: #000;
 }
 
 	.qtip-default .qtip-titlebar{
-		background-color: #f94928;
-		color:#FFF;
+		background-color: #eee;
+		color:#000;
 	}
 
 	.qtip-default .qtip-icon{
@@ -38,6 +38,11 @@
 	.qtip-default .qtip-titlebar .qtip-close{
 		border-color: #AAA;
 		color: #111;
+	}
+	.qtip-shadow{
+		-webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+		box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
 	}
 </style>
 <script type='text/javascript'>
@@ -97,24 +102,25 @@ $(document).ready(function() {
 		      }
 	      }
 	      var cursor =  (url == '') ? 'default' : 'pointer';
-	      $(element).find('a').attr('href', url );
-	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
-	      $(element).find('a').html(htmltxt);
-	      $(element).find('a').attr('title', description);
-	      $(element).find('a').addClass('agendaitem');
+	      var anchor = $(element).find('a');
+	      anchor.attr('href', url );
+	      anchor.attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
+	      anchor.html(htmltxt);
+	      anchor.attr('title', description);
+	      anchor.addClass('agendaitem');
 	      if(description !== '')
 	      {
-		      $(element).find('a').qtip({ 
+		      anchor.qtip({ 
 			content: {
 				text: description, 
 				title:event.title
 			},
 			position: {
 				my: 'top center',  // Position my top left...
-				target: 'mouse'
+				target: anchor
 			},
 			 style: {
-				classes: 'qtip-blue qtip-shadow'
+				classes: 'qtip-shadow'
 			},
 			show: {
 				effect: function(offset) {
