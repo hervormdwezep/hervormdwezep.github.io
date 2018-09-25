@@ -16,6 +16,29 @@
 	#calendar.fc-unthemed {
 		font-family: Verdana, Helvetica,Arial,sans-serif, "Lucida Grande";
 	}
+	/* Default tooltip style */
+.qtip-default{
+	border: 1px solid #CC3300;
+
+	background-color: #FFFFFF;
+	color: #000;
+}
+
+	.qtip-default .qtip-titlebar{
+		background-color: #CC3300;
+		color:#000;
+	}
+
+	.qtip-default .qtip-icon{
+		border-color: #CCC;
+		background: #F1F1F1;
+		color: #777;
+	}
+
+	.qtip-default .qtip-titlebar .qtip-close{
+		border-color: #AAA;
+		color: #111;
+	}
 </style>
 <script type='text/javascript'>
 $(document).ready(function() {
@@ -59,7 +82,7 @@ $(document).ready(function() {
 	   {
 	      var htmltxt = event.title;
 	      var url = '';
-	      var title = '';
+	      var description = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
 	      if(event.description != undefined)
 	      {
@@ -77,27 +100,30 @@ $(document).ready(function() {
 	      $(element).find('a').attr('href', url );
 	      $(element).find('a').attr('style', 'text-decoration:none;' + 'cursor:' + cursor + ';');
 	      $(element).find('a').html(htmltxt);
-	      $(element).find('a').attr('title', title);
+	      $(element).find('a').attr('title', description);
 	      $(element).find('a').addClass('agendaitem');
-	      $(element).find('a').qtip({ 
- 	   	content: {
- 	       		text: event.description, 
-			title:event.title
-        	},
-    		position: {
-        		my: 'top left',  // Position my top left...
-        		at: 'left center', // at the bottom right of...
-        		target: $(element) // my target
-    		},
-		 style: {
-        		classes: 'qtip-blue qtip-shadow'
-    		},
-    		show: {
-        		effect: function(offset) {
-            			$(this).slideDown(100); // "this" refers to the tooltip
-        		}
-    		}
-             });   
+	      if(description !== '')
+	      {
+		      $(element).find('a').qtip({ 
+			content: {
+				text: description, 
+				title:event.title
+			},
+			position: {
+				my: 'top left',  // Position my top left...
+				at: 'left center', // at the bottom right of...
+				target: $(element) // my target
+			},
+			 style: {
+				classes: 'qtip-blue qtip-shadow'
+			},
+			show: {
+				effect: function(offset) {
+					$(this).slideDown(100); // "this" refers to the tooltip
+				}
+			}
+		     }); 
+	      }
           }
 	  return true;
         }
