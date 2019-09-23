@@ -64,34 +64,38 @@ $(document).ready(function() {
             }
         ],
         eventRender: function(event, element) {
-	      var htmltxt = '<p>' + event.title;
-	      var url = '';
-	      var title = '';
-	      if(event.location != undefined) htmltxt += '</br>' +' (' + event.location + ')';
-	      htmltxt += '</p>';
-	      if(event.description != undefined)
-	      {
-		      if(event.description.startsWith('website:'))
+	      if(event.title != undefined) {
+		      var htmltxt = '<p>' + event.title;
+		      var url = '';
+		      var title = '';
+		      if(event.location != undefined) htmltxt += '</br>' +' (' + event.location + ')';
+		      htmltxt += '</p>';
+		      if(event.description != undefined)
 		      {
-			      url = event.description.substr(8);
-			      $(element).find('a').attr('name', 'jumper');
-		      }
-		      else
-		      {
-			      title = event.description;
-		      }
-	      }		
-	      var m = moment(event.start);
-	      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
+			      if(event.description.startsWith('website:'))
+			      {
+				      url = event.description.substr(8);
+				      $(element).find('a').attr('name', 'jumper');
+			      }
+			      else
+			      {
+				      title = event.description;
+			      }
+		      }		
+		      var m = moment(event.start);
+		      $(element).find('td.fc-list-item-time').html(m.format('HH:mm'));
 
-	      var cursor =  (url == '') ? 'default' : 'pointer';
-	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
-	      $(element).find('a').attr('href', url );
-	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
-	      $(element).find('a').html(htmltxt);
-	      $(element).find('a').attr('title', title);
-				
-   	      $(element).find('span.fc-event-dot').replaceWith('');
+		      var cursor =  (url == '') ? 'default' : 'pointer';
+		      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
+		      $(element).find('a').attr('href', url );
+		      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
+		      $(element).find('a').html(htmltxt);
+		      $(element).find('a').attr('title', title);
+
+		      $(element).find('span.fc-event-dot').replaceWith('');
+		      return true;
+	      }
+	      return false;
         }});
      });
 	</script>
