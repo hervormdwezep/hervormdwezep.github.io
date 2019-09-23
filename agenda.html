@@ -53,7 +53,7 @@ $(document).ready(function() {
         ],
         eventRender: function(event, element) {
            //if (typeof event.location !== 'undefined') {
-	   if(event != undefined)
+	   if(event != undefined && event.title != undefined)
 	   {
 	      var htmltxt = event.title;
 	      var url = '';
