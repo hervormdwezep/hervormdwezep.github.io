@@ -1,0 +1,80 @@
+<html>
+<head>
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css' />
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/locale/nl.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/gcal.js'></script>
+   <script type="text/javascript" src="https://hervormdwezep.github.io/polyfill.js"></script>
+</head>
+<body style="overflow-y:hidden">
+<div id='calendar' style='overflow-y:hidden;'></div>
+<style>
+	#calendar.fc-unthemed {
+		font-family: Verdana, Helvetica,Arial,sans-serif, "Lucida Grande";
+	}
+</style>
+<script type='text/javascript'>
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        defaultView: 'listMonth',
+        validRange: function(nowDate) {
+          return {
+              start: nowDate,
+              end: nowDate.clone().add(1, 'year')
+          };
+	},
+	eventClick: function(calEvent, jsEvent, view) {
+	    var linkUrl = $('a', this).attr('href');
+	    if($('a', this).attr('name') == 'jumper')
+	    {
+		    var win = window.open(linkUrl, '_blank');
+		    win.focus();
+	 	    return false;
+	    }
+	    return false;
+        },
+        height:'parent',
+        googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
+        eventSources: [
+            {
+                googleCalendarId: 'pkc015179h6914hbejn5emdqbrgct4d6@import.calendar.google.com'
+            },
+        ],
+        eventRender: function(event, element) {
+           //if (typeof event.location !== 'undefined') {
+	   if(event != undefined && event.title != undefined)
+	   {
+	      var htmltxt = event.title;
+	      var url = '';
+	      var title = '';
+	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
+	      if(event.description != undefined)
+	      {
+		      if(event.description.startsWith('website:'))
+		      {
+			      url = event.description.substr(8);
+	     		      $(element).find('a').attr('name', 'jumper');
+		      }
+		      else
+		      {
+			      title = event.description;
+		      }
+	      }
+	      var cursor =  (url == '') ? 'default' : 'pointer';
+	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
+	      $(element).find('a').attr('href', url );
+	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
+	      $(element).find('a').html(htmltxt);
+	      $(element).find('a').attr('title', title)
+	      return true;
+          }
+	  return false;
+        }
+	});
+     });
+     $('#calendar').fullCalendar( 'gotoDate', moment() )
+  </script>
+</body>
+</html>
