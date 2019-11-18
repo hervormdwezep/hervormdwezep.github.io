@@ -19,7 +19,7 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         defaultView: 'listMonth',
-	timeZone: 'Europe/Amsterdam',
+	timeZone: false,
         validRange: function(nowDate) {
           return {
               start: nowDate,
