@@ -19,7 +19,7 @@
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         defaultView: 'listMonth',
-	timeZone: false,
+	timeZone: 'local',
         validRange: function(nowDate) {
           return {
               start: nowDate,
@@ -67,7 +67,7 @@ $(document).ready(function() {
 	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
 	      $(element).find('a').attr('href', url );
 	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
-	      $(element).find('a').html('test ' + htmltxt);
+	      $(element).find('a').html('tes ' + htmltxt);
 	      $(element).find('a').attr('title', title)
 	      return true;
           }
