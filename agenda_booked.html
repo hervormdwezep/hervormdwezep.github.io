@@ -67,7 +67,7 @@ $(document).ready(function() {
 	      var tekstdeco = (url == '') ? 'text-decoration:none;' : ''
 	      $(element).find('a').attr('href', url );
 	      $(element).find('a').attr('style', tekstdeco + 'cursor:' + cursor + ';');
-	      $(element).find('a').html(htmltxt);
+	      $(element).find('a').html('test ' + htmltxt);
 	      $(element).find('a').attr('title', title)
 	      return true;
           }
