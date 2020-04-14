@@ -34,6 +34,7 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
 	    header: false,	
         defaultView: 'listWeek',
+	listDayFormat: true,
         listDayAltFormat: false,
 	eventClick: function(calEvent, jsEvent, view) {
    	    if($('a', this).attr('name') == 'jumper')
