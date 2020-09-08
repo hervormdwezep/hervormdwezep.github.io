@@ -1,0 +1,211 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ical.marudot.com//iCal Event Maker
+X-WR-CALNAME:Shalom
+NAME:Shalom
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Berlin
+X-LIC-LOCATION:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1032283520@marudot.com
+DTSTART;TZID=Europe/Berlin:20200927T193000
+DTEND;TZID=Europe/Berlin:20200927T213000
+SUMMARY:Bijbelstudie/start
+DESCRIPTION:Bestuur bereidt voor en neemt koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1390801969@marudot.com
+DTSTART;TZID=Europe/Berlin:20201011T193000
+DTEND;TZID=Europe/Berlin:20201011T213000
+SUMMARY:Bijbelstudie
+DESCRIPTION:Hanneke en Malou bereiden voor en het bestuur neemt koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1334582763@marudot.com
+DTSTART;TZID=Europe/Berlin:20201025T193000
+DTEND;TZID=Europe/Berlin:20201025T213000
+SUMMARY:Bijbelstudie
+DESCRIPTION:Jelle & Ronin bereiden voor en het Hanneke & Malou nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-968738627@marudot.com
+DTSTART;TZID=Europe/Berlin:20201031T193000
+DTEND;TZID=Europe/Berlin:20201031T213000
+SUMMARY:Shalom ALV en bowlen
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-959622263@marudot.com
+DTSTART;TZID=Europe/Berlin:20201108T193000
+DTEND;TZID=Europe/Berlin:20201108T213000
+SUMMARY:Shalom Spelavond
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Commissie organiseert
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1654864406@marudot.com
+DTSTART;TZID=Europe/Berlin:20201122T193000
+DTEND;TZID=Europe/Berlin:20201122T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Elizabeth & Jolien bereiden voor en het Jelle & Ronin nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1327362713@marudot.com
+DTSTART;TZID=Europe/Berlin:20201122T193000
+DTEND;TZID=Europe/Berlin:20201122T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Elizabeth & Jolien bereiden voor en het Jelle & Ronin nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1112447772@marudot.com
+DTSTART;TZID=Europe/Berlin:20201206T193000
+DTEND;TZID=Europe/Berlin:20201206T213000
+SUMMARY:Bijbelstudie over dienst en samen eten
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Predikant bereidt voor en het Bestuur neemt koffie en koek mee.\n\nOnder voorbehoud\; idee om predikant van dienst te vragen om wat vragen te maken n.a.v. middagdienst. Dit in combinatie met een hapje samen eten. 
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1653349980@marudot.com
+DTSTART;TZID=Europe/Berlin:20201220T193000
+DTEND;TZID=Europe/Berlin:20201220T213000
+SUMMARY:Shalom Kerstviering
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Georganiseerd door commissie
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-547080350@marudot.com
+DTSTART;TZID=Europe/Berlin:20210117T193000
+DTEND;TZID=Europe/Berlin:20210117T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Wilbert & Sander bereiden voor en het Elizabeth & Jolien nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-457428179@marudot.com
+DTSTART;TZID=Europe/Berlin:20210131T193000
+DTEND;TZID=Europe/Berlin:20210131T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Rik en Margreet bereiden voor en het Wilbert & Sander nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1480690022@marudot.com
+DTSTART;TZID=Europe/Berlin:20210214T193000
+DTEND;TZID=Europe/Berlin:20210214T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Karin & Judith bereiden voor en het bestuur neemt koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-66474070@marudot.com
+DTSTART;TZID=Europe/Berlin:20210228T193000
+DTEND;TZID=Europe/Berlin:20210228T213000
+SUMMARY:Shalom Ouderenbezoek
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1882617619@marudot.com
+DTSTART;TZID=Europe/Berlin:20210314T193000
+DTEND;TZID=Europe/Berlin:20210314T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Marc en Helmer bereiden voor en Karin & Judith nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1470540559@marudot.com
+DTSTART;TZID=Europe/Berlin:20210328T193000
+DTEND;TZID=Europe/Berlin:20210328T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Lieke & Maaike bereiden voor en Marc & Helmer nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-744561884@marudot.com
+DTSTART;TZID=Europe/Berlin:20210411T193000
+DTEND;TZID=Europe/Berlin:20210411T213000
+SUMMARY:Shalom Paasviering
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Georganiseerd door commissie
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-1477315389@marudot.com
+DTSTART;VALUE=DATE:20210423
+DTEND;VALUE=DATE:20210427
+SUMMARY:Shalom Kamp
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Georganiseerd door commissie
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-997513051@marudot.com
+DTSTART;TZID=Europe/Berlin:20210509T193000
+DTEND;TZID=Europe/Berlin:20210509T213000
+SUMMARY:Bijbelstudie
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Gerrald & Wout bereiden voor en Lieke & Maaike nemen koffie en koek mee
+LOCATION:Schakel
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20200908T204916Z
+UID:20200908T204916Z-51073652@marudot.com
+DTSTART;TZID=Europe/Berlin:20210524T193000
+DTEND;TZID=Europe/Berlin:20210524T220000
+SUMMARY:Slotactiviteit Shalom
+URL:https%3A%2F%2Fwww.hervormdwezep.nl%2Fshalom
+DESCRIPTION:Georganiseerd door commissie
+LOCATION:Schakel
+END:VEVENT
+END:VCALENDAR
