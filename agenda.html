@@ -64,7 +64,7 @@ $(document).ready(function() {
 	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
               //htmltxt += ((event.source.className.length > 0) ? ', ' + event.source.className : '' );
-	      if(event.source != undefined) htmltxt += ', ' + event.source.className;
+	      if(event.source.className != undefined) htmltxt += ', ' + event.source.className;
 	      if(event.description != undefined)
 	      {
 		      if(event.description.startsWith('website:'))
