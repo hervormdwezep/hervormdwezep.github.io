@@ -39,19 +39,24 @@ $(document).ready(function() {
         googleCalendarApiKey: 'AIzaSyBDwlxQ-Ab7YMtk4VKqJPxSIZJ8Z9ISv38',
         eventSources: [
             {
-                googleCalendarId: 'le7o81vkb26po7fee9egestooo@group.calendar.google.com'
+                googleCalendarId: 'le7o81vkb26po7fee9egestooo@group.calendar.google.com',
+                name: 'Cal 1'
             },
             {
                 googleCalendarId: 'q9ipt257tvc5j73520rm83ggn4@group.calendar.google.com',
+                name: 'Cal 2'
             },
             {
                 googleCalendarId: 'pj5ufq9abrrq9scp7hs6ohkln8@group.calendar.google.com',
+                name: 'Cal 3'
             },
             {
                 googleCalendarId: '1dded5fb545c581b702bfc92e99b107042a03671c6b1fda102ee6b60f32594f8@group.calendar.google.com',		
+                name: 'Dorpskerk'
             },
             {
                 googleCalendarId: 'hervormdwezep@gmail.com',
+                name: ''
             }
         ],
         eventRender: function(event, element) {
@@ -71,7 +76,7 @@ $(document).ready(function() {
 		      }
 		      else
 		      {
-			      title = event.description;
+			      title = event.description + ' (' + event.source.name + ')' ;
 		      }
 	      }
 	      var cursor =  (url == '') ? 'default' : 'pointer';
