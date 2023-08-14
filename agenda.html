@@ -59,10 +59,12 @@ $(document).ready(function() {
            //if (typeof event.location !== 'undefined') {
 	   if(event != undefined && event.title != undefined)
 	   {
-	      var htmltxt = event.title + ((event.source.className.length > 0) ? ', ' + event.source.className : '' );
+	      var htmltxt = event.title;
 	      var url = '';
 	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
+              //htmltxt += ((event.source.className.length > 0) ? ', ' + event.source.className : '' );
+	      if(event.source != undefined) htmltxt += ', ' + event.source.className;
 	      if(event.description != undefined)
 	      {
 		      if(event.description.startsWith('website:'))
