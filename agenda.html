@@ -40,30 +40,30 @@ $(document).ready(function() {
         eventSources: [
             {
                 googleCalendarId: 'le7o81vkb26po7fee9egestooo@group.calendar.google.com',
-                name: 'Cal 1'
+                className: 'Cal 1'
             },
             {
                 googleCalendarId: 'q9ipt257tvc5j73520rm83ggn4@group.calendar.google.com',
-                name: 'Cal 2'
+                className: 'Cal 2'
             },
             {
                 googleCalendarId: 'pj5ufq9abrrq9scp7hs6ohkln8@group.calendar.google.com',
-                name: 'Cal 3'
+                className: 'Cal 3'
             },
             {
                 googleCalendarId: '1dded5fb545c581b702bfc92e99b107042a03671c6b1fda102ee6b60f32594f8@group.calendar.google.com',		
-                name: 'Dorpskerk'
+                className: 'Dorpskerk'
             },
             {
                 googleCalendarId: 'hervormdwezep@gmail.com',
-                name: ''
+                className: ''
             }
         ],
         eventRender: function(event, element) {
            //if (typeof event.location !== 'undefined') {
 	   if(event != undefined && event.title != undefined)
 	   {
-	      var htmltxt = event.title;
+	      var htmltxt = event.title + ' (' + event.source.className + ')' ;
 	      var url = '';
 	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
@@ -76,7 +76,7 @@ $(document).ready(function() {
 		      }
 		      else
 		      {
-			      title = event.description + ' (' + event.source.name + ')' ;
+			      title = event.description;
 		      }
 	      }
 	      var cursor =  (url == '') ? 'default' : 'pointer';
