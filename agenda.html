@@ -57,9 +57,9 @@ $(document).ready(function() {
         ],
         eventRender: function(event, element) {
            //if (typeof event.location !== 'undefined') {
-	   if(event != undefined && event.title != undefined)
+	   if(event != undefined /*&& event.title != undefined*/)
 	   {
-	      var htmltxt = event.title;
+	      var htmltxt = event.title != undefined ? event.title : 'onbekend';
 	      var url = '';
 	      var title = '';
 	      if(event.location != undefined) htmltxt += ' (' + event.location + ')';
